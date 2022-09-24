@@ -1,0 +1,8 @@
+.profile {
+  margin: 40px auto 0 auto;
+  max-width: 880px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
