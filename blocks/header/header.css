@@ -4,6 +4,20 @@
   max-width: 880px;
   border-bottom: 1px solid rgb(33%, 33%, 33%, .7);
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    margin-top: 28px;
+    max-width: 320px;
+    padding-left: 27px;
+    height: 56px;
+  }
 }

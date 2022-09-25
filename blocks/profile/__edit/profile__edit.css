@@ -10,3 +10,10 @@
   opacity: .6;
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .profile__edit {
+    min-width: 18px;
+    min-height: 18px;
+  }
+}

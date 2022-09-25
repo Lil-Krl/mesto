@@ -2,6 +2,15 @@
   display: grid;
   grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
   align-items: center;
-  box-sizing: border-box;
   gap: 16px 18px;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__info {
+    margin-top: 23px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 10px;
+  }
 }
