@@ -4,7 +4,7 @@
   height: 50px;
   border: 2px solid #fff;
   background: transparent url(../../../images/btnsAndicons/addbtn.svg) center no-repeat;
-  transition: opacity .5;
+  transition: opacity .5s;
   align-self: center;
 }
 
