@@ -1,29 +1,36 @@
-let editProfileIcon = document.querySelector('.profile__editor');
-let formElement = document.querySelector('.popup__edit');
-let Name = document.querySelector('.profile__name');
-let job = document.querySelector('.profile__activity');
-let nameInput = document.querySelector('popup-edit__input_item_name');
-let jobInput = document.querySelector('.popup-edit__input_item_activity');
+let editProfileIcon = document.querySelector('.profile__edit');
 
-console.log("Pizda");
-// Обработчик «отправки» формы, хотя пока
-// она никуда отправляться не будет
+let editProfilePopup = document.querySelector('.popup-edit');
+
+let closeIconPopup = editProfilePopup.querySelector('.popup-edit__close');
+
+let name = document.querySelector('.profile__name');
+
+let activity = document.querySelector('.profile__activity');
+
+let nameInput = editProfilePopup.querySelector('.popup-edit__input_item_name');
+
+let activityInput = editProfilePopup.querySelector('.popup-edit__input_item_activity');
+
 function popupOpen() {
-  formElement.classList.add('popup-edit_opened');
-  nameInput.value = Name.textContent;
-  jobInput.value = job.textContent;
+  editProfilePopup.classList.add('popup-edit_opened');
+  nameInput.value = name.textContent;
+  activityInput.value = activity.textContent;
 }
 
-function popupClose () {
-  formElement.classList.remove('popup-edit_opened');
+function popupClose() {
+  editProfilePopup.classList.remove('popup-edit_opened');
 }
 
 function formSubmitHandler(evt) {
   evt.preventDefault();
-  Name.textContent = nameInput.value;
-  job.textContent = jobInput.value;
+  name.textContent = nameInput.value;
+  activity.textContent = activityInput.value;
   popupClose();
 }
 
 editProfileIcon.addEventListener('click', popupOpen);
-formElement.addEventListener('submit', formSubmitHandler);
+
+editProfilePopup.addEventListener('submit', formSubmitHandler);
+
+closeIconPopup.addEventListener('click', popupClose);
