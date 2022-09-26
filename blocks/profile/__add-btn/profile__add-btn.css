@@ -6,6 +6,7 @@
   background: transparent url(../../../images/btnsAndicons/addbtn.svg) center no-repeat;
   transition: opacity .5s;
   align-self: center;
+  border-radius: 2px;
 }
 
 .profile__add-btn:hover {
@@ -22,7 +23,6 @@
 @media screen and (max-width: 767px) {
   .profile__add-btn {
     min-width: 252px;
-    margin: 0;
     margin-top: 36px;
   }
 }
