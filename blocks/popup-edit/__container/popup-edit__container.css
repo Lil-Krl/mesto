@@ -1,6 +1,5 @@
 .popup-edit__container {
   max-width: 430px;
-  width: 100%;
   padding: 34px 36px;
   background: #FFFFFF;
   position: relative;
@@ -11,6 +10,7 @@
 @media screen and (max-width: 767px) {
   .popup-edit__container {
     max-width: 282px;
+    max-height: 322px;
     padding: 25px 22px;
   }
 }
