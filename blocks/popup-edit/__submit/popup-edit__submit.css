@@ -18,7 +18,7 @@
 
 @media screen and (max-width: 767px) {
   .popup-edit__submit {
-    max-width: 238px;
+    width: 238px;
     height: 46px;
     font-size: 14px;
     line-height: 17px;

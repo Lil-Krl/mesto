@@ -8,9 +8,9 @@ let name = document.querySelector('.profile__name');
 
 let activity = document.querySelector('.profile__activity');
 
-let nameInput = editProfilePopup.querySelector('.popup-edit__input-item_name');
+let nameInput = editProfilePopup.querySelector('.popup-edit__input-item_type_name');
 
-let activityInput = editProfilePopup.querySelector('.popup-edit__input-item_activity');
+let activityInput = editProfilePopup.querySelector('.popup-edit__input-item_type_activity');
 
 function popupOpen() {
   editProfilePopup.classList.add('popup-edit_opened');
