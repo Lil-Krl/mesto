@@ -1,15 +1,12 @@
 .popup-edit__input-item {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   height: 14px;
   padding-bottom: 13px;
   width: 100%;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.popup-edit__input-item {
-  margin-bottom: 30px;
 }
 
 .popup-edit__input-item:nth-child(2) {
