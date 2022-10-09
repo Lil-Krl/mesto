@@ -1,4 +1,4 @@
-.popup-edit__name {
+.popup__name {
   margin: 0;
   padding: 0;
   max-width: 330px;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .popup-edit__name {
+  .popup__name {
     max-width: 238px;
     margin-bottom: 75px;
     font-size: 18px;

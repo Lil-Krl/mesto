@@ -1,4 +1,4 @@
-.popup-edit__input-item {
+.popup__input-item {
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
@@ -9,6 +9,6 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.popup-edit__input-item:nth-child(2) {
+.popup__input-item:nth-child(2) {
   margin-bottom: 45px;
 }
