@@ -1,7 +1,7 @@
 .cards__like {
   min-width: 22px;
   min-height: 19px;
-  background: transparent url(../../../images/btnsAndicons/like.svg) center no-repeat;
+  background:  url(../../../images/btnsAndicons/like.svg);
   border: none;
   transition: opacity .5s;
 }
