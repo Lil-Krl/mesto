@@ -28,48 +28,6 @@
         <button class="profile__add-btn" type="button" aria-label="Добавить место"></button>
       </section>
       <section class="cards">
-        <article class="cards__item">
-          <img class="cards__img" src="./images/cards/one.png" alt="Карачаевск">
-          <div class="cards__info">
-            <h2 class="cards__title">Карачаевск</h2>
-            <button class="cards__like" type="button" aria-label="Лайк"></button>
-          </div>
-        </article>
-        <article class="cards__item">
-          <img class="cards__img" src="./images/cards/two.png" alt="Гора Эльбрус">
-          <div class="cards__info">
-            <h2 class="cards__title">Гора Эльбрус</h2>
-            <button class="cards__like" type="button" aria-label="Лайк"></button>
-          </div>
-        </article>
-        <article class="cards__item">
-          <img class="cards__img" src="./images/cards/three.png" alt="Домбай">
-          <div class="cards__info">
-            <h2 class="cards__title">Домбай</h2>
-            <button class="cards__like" type="button" aria-label="Лайк"></button>
-          </div>
-        </article>
-        <article class="cards__item">
-          <img class="cards__img" src="./images/cards/three.png" alt="Домбай">
-          <div class="cards__info">
-            <h2 class="cards__title">Домбай</h2>
-            <button class="cards__like" type="button" aria-label="Лайк"></button>
-          </div>
-        </article>
-        <article class="cards__item">
-          <img class="cards__img" src="./images/cards/two.png" alt="Гора Эльбрус">
-          <div class="cards__info">
-            <h2 class="cards__title">Гора Эльбрус</h2>
-            <button class="cards__like" type="button" aria-label="Лайк"></button>
-          </div>
-        </article>
-        <article class="cards__item">
-          <img class="cards__img" src="./images/cards/one.png" alt="Карачаевск">
-          <div class="cards__info">
-            <h2 class="cards__title">Карачаевск</h2>
-            <button class="cards__like" type="button" aria-label="Лайк"></button>
-          </div>
-        </article>
       </section>
     </main>
   </div>
@@ -89,6 +47,28 @@
       </form>
     </div>
   </div>
+  <div class="popup-cards">
+    <div class="popup-edit__container">
+      <button class="popup-edit__close" type="button" aria-label="Закрыть форму"></button>
+      <h3 class="popup-edit__name">Новое место</h3>
+      <form class="popup-edit__form" name="place-edit">
+          <input type="text" class="popup-edit__input-item popup-edit__input-item_type_place" 
+            name="place" required placeholder="Название">
+          <input type="text" class="popup-edit__input-item popup-edit__input-item_type_link"
+            name="activity" required placeholder="Ссылка на картинку">
+        <button class="popup-edit__submit" type="submit" aria-label="Создать">Создать</button>
+      </form>
+    </div>
+  </div>
+  <template id="cards-template">
+    <article class="cards__item">
+      <img class="cards__img" src="#" alt="">
+      <div class="cards__info">
+        <h2 class="cards__title"></h2>
+        <button class="cards__like" type="button" aria-label="Лайк"></button>
+      </div>
+    </article>  
+  </template>
   <script src="./scripts/script.js"></script>
 </body>
 
