@@ -32,7 +32,7 @@
   <footer class="footer">
     <p class="footer__copyright">© 2022 Mesto Russia</p>
   </footer>
-  <div class="popup">
+  <div class="popup" id="popup-profile">
     <div class="popup__container">
       <button class="popup__close" type="button" aria-label="Закрыть форму"></button>
       <h3 class="popup__name">Редактировать профиль</h3>
@@ -45,21 +45,29 @@
       </form>
     </div>
   </div>
-  <div class="popup-cards">
+  <div class="popup" id="popup-cards">
     <div class="popup__container">
       <button class="popup__close" type="button" aria-label="Закрыть форму"></button>
       <h3 class="popup__name">Новое место</h3>
       <form class="popup__form" name="place-edit">
-        <input type="text" class="popup__input-item popup__input-item_type_place" name="place" required
+        <input type="text" class="popup__input-item popup__input-item_type_name" name="place" required
           placeholder="Название">
-        <input type="text" class="popup__input-item popup__input-item_type_link" name="activity" required
+        <input type="text" class="popup__input-item popup__input-item_type_activity" name="activity" required
           placeholder="Ссылка на картинку">
         <button class="popup__submit" type="submit" aria-label="Создать">Создать</button>
       </form>
     </div>
   </div>
+  <div id="image-popup" class="popup popup_zoom_active">
+    <div class="popup__zoom-container">
+      <button type="button" class="popup__close" aria-label="Закрыть"></button>
+      <img src="#" class="popup__image" alt="">
+      <p class="popup__description"></p>
+    </div>
+  </div>
   <template id="cards-template">
     <article class="cards__item">
+      <button type="button" class="cards__delete" aria-label="Удалить"></button>
       <img class="cards__img" src="#" alt="">
       <div class="cards__info">
         <h2 class="cards__title"></h2>
@@ -67,6 +75,7 @@
       </div>
     </article>
   </template>
+  <script src="./scripts/initialCards.js"></script>
   <script src="./scripts/script.js"></script>
 </body>
 </html>
