@@ -31,6 +31,7 @@ const cardsArea = document.querySelector('.cards');
 const openPopup = function (popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closePopupEsc);
+  popup.addEventListener('click', closePopupOverlay);
 }
 
 const openPopupProfile = function () {
@@ -42,6 +43,7 @@ const openPopupProfile = function () {
 const closePopup = function (popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', closePopupEsc);
+  popup.removeEventListener('click', closePopupOverlay);
 }
 
 const createCard = function (name, link) {
@@ -112,6 +114,13 @@ cardAddPopup.addEventListener('submit', addNewCard);
 
 function closePopupEsc(evt) {
   if (evt.key === 'Escape') {
+    const popup = document.querySelector('.popup_opened');
+    closePopup(popup);
+  }
+}
+
+function closePopupOverlay(evt) {
+  if (evt.target === evt.currentTarget) {
     const popup = document.querySelector('.popup_opened');
     closePopup(popup);
   }
