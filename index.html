@@ -36,11 +36,13 @@
     <div class="popup__container">
       <button class="popup__close" type="button" aria-label="Закрыть форму"></button>
       <h3 class="popup__name">Редактировать профиль</h3>
-      <form class="popup__form" name="profile">
+      <form class="popup__form" name="profile" novalidate>
         <input type="text" value="Жак-Ив Кусто" class="popup__input-item popup__input-item_type_name" name="name"
-          required placeholder="Ваше имя">
+          required placeholder="Ваше имя" minlength="2" maxlength="40">
+          <span data-number="1" class="popup_error_visible"></span>
         <input type="text" value="Исследователь океана" class="popup__input-item popup__input-item_type_activity"
-          name="activity" required placeholder="Ваш род занятий">
+          name="activity" required placeholder="Ваш род занятий" minlength="2" maxlength="200">
+          <span data-number="2" class="popup_error_visible"></span>
         <button class="popup__submit" type="submit" aria-label="Сохранить">Сохранить</button>
       </form>
     </div>
@@ -49,11 +51,13 @@
     <div class="popup__container">
       <button class="popup__close" type="button" aria-label="Закрыть форму"></button>
       <h3 class="popup__name">Новое место</h3>
-      <form class="popup__form" name="place-edit">
+      <form class="popup__form" name="place-edit" novalidate>
         <input type="text" class="popup__input-item popup__input-item_type_name" name="place" required
-          placeholder="Название">
-        <input type="text" class="popup__input-item popup__input-item_type_activity" name="activity" required
+          placeholder="Название" minlength="2" maxlength="30">
+          <span data-number="1" class="popup_error_visible"></span>
+        <input type="url" class="popup__input-item popup__input-item_type_activity url" name="activity" required
           placeholder="Ссылка на картинку">
+          <span data-number="2" class="popup_error_visible"></span>
         <button class="popup__submit" type="submit" aria-label="Создать">Создать</button>
       </form>
     </div>
@@ -76,7 +80,7 @@
     </article>
   </template>
   <script src="./scripts/initialCards.js"></script>
-  <script src="./scripts/script.js"></script>
   <script src="./scripts/validate.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 </html>
