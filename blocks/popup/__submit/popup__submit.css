@@ -8,12 +8,12 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
+  cursor: pointer;
   transition: opacity .5s;
 }
 
 .popup__submit:hover {
   opacity: 0.8;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
