@@ -1,10 +1,10 @@
-const editProfileIcon = document.querySelector('.profile__edit');
+const iconEditProfile = document.querySelector('.profile__edit');
 
-const addCardIcon = document.querySelector('.profile__add-btn');
+const iconAddCard = document.querySelector('.profile__add-btn');
 
-const editProfilePopup = document.querySelector('#popup-profile');
+const popupEditProfile = document.querySelector('#popup-profile');
 
-const closeBtns = document.querySelectorAll('.popup__close');
+const btnsClose = document.querySelectorAll('.popup__close');
 
 const cardAddPopup = document.querySelector('#popup-cards');
 
@@ -18,9 +18,9 @@ const profileName = document.querySelector('.profile__name');
 
 const profileActivity = document.querySelector('.profile__activity');
 
-const nameInput = editProfilePopup.querySelector('.popup__input-item_type_name');
+const nameInput = popupEditProfile.querySelector('.popup__input-item_type_name');
 
-const activityInput = editProfilePopup.querySelector('.popup__input-item_type_activity');
+const activityInput = popupEditProfile.querySelector('.popup__input-item_type_activity');
 
 const cardNameInput = cardAddPopup.querySelector('.popup__input-item_type_name');
 
@@ -37,7 +37,7 @@ const openPopup = function (popup) {
 const openPopupProfile = function () {
   nameInput.value = profileName.textContent;
   activityInput.value = profileActivity.textContent;
-  openPopup(editProfilePopup);
+  openPopup(popupEditProfile);
 }
 
 const closePopup = function (popup) {
@@ -96,19 +96,19 @@ const handleProfileFormSubmit = function (evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileActivity.textContent = activityInput.value;
-  closePopup(editProfilePopup);
+  closePopup(popupEditProfile);
 }
 
-editProfileIcon.addEventListener('click', openPopupProfile);
+iconEditProfile.addEventListener('click', openPopupProfile);
 
-addCardIcon.addEventListener('click', () => openPopup(cardAddPopup));
+iconAddCard.addEventListener('click', () => openPopup(cardAddPopup));
 
-closeBtns.forEach((button) => {
+btnsClose.forEach((button) => {
   const popup = button.closest('.popup');
   button.addEventListener('click', () => closePopup(popup));
 });
 
-editProfilePopup.addEventListener('submit', handleProfileFormSubmit);
+popupEditProfile.addEventListener('submit', handleProfileFormSubmit);
 
 cardAddPopup.addEventListener('submit', addNewCard);
 
@@ -122,6 +122,6 @@ function closePopupEsc(evt) {
 function closePopupOverlay(evt) {
   if (evt.target === evt.currentTarget) {
     const popup = document.querySelector('.popup_opened');
-    closePopup(popup);
+    closePopup(evt.target);
   }
 }
