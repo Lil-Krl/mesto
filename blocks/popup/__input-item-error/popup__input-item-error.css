@@ -1,4 +1,4 @@
-.popup__error-visible {
+.popup__input-item-error {
   display: block;
   font-weight: 400;
   font-size: 12px;
@@ -7,4 +7,6 @@
   padding-bottom: 13px;
   min-height: 30px;
   color: #FF0000;
+  visibility: hidden;
+  
 }
