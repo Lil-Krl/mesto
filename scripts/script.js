@@ -28,6 +28,8 @@ const cardLinkInput = cardAddPopup.querySelector('.popup__input-item_type_activi
 
 const cardsArea = document.querySelector('.cards');
 
+const btnSubmit = cardAddPopup.querySelector('.popup__submit');
+
 const openPopup = function (popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closePopupEsc);
@@ -81,6 +83,8 @@ const addNewCard = function (evt) {
   evt.preventDefault();
   cardsArea.prepend(createCard(cardNameInput.value, cardLinkInput.value));
   evt.target.reset()
+  btnSubmit.classList.add('popup__submit_disabled')
+  btnSubmit.setAttribute('disabled', true)
   closePopup(cardAddPopup);
 }
 
@@ -121,7 +125,6 @@ function closePopupEsc(evt) {
 
 function closePopupOverlay(evt) {
   if (evt.target === evt.currentTarget) {
-    const popup = document.querySelector('.popup_opened');
     closePopup(evt.target);
   }
 }
