@@ -25,7 +25,7 @@ const initialCards = [
   }
 ]
 
-const formList = {
+const validationConfig = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input-item',
   submitButtonSelector: '.popup__submit',
@@ -34,4 +34,4 @@ const formList = {
   errorClass: 'popup__input-item_type_visible'
 }
 
-export { initialCards, formList }
+export {initialCards, validationConfig}

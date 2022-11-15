@@ -1,4 +1,4 @@
-import { initialCards, formList } from './initialCards.js'
+import { initialCards, validationConfig } from './initialCards.js'
 import { Card } from './Card.js'
 import { FormValidator } from './FormValidator.js'
 
@@ -98,9 +98,9 @@ const handleProfileFormSubmit = function (evt) {
 }
 
 
-const addCardValidate = new FormValidator(formList, cardAddPopup)
+const addCardValidate = new FormValidator(validationConfig, cardAddPopup)
 addCardValidate.enableValidationCheck()
-const editProfileValidate = new FormValidator(formList, formProfile)
+const editProfileValidate = new FormValidator(validationConfig, formProfile)
 editProfileValidate.enableValidationCheck()
 
 iconEditProfile.addEventListener('click', openPopupProfile)
