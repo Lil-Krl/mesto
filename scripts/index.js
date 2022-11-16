@@ -14,11 +14,11 @@ const cardAddPopup = document.querySelector('#popup-cards')
 
 const formCards = cardAddPopup.querySelector('.popup__form')
 
-export const imgZoomPopup = document.querySelector('#image-popup')
+const imgZoomPopup = document.querySelector('#image-popup')
 
-export const imgZoomPopupDescription = imgZoomPopup.querySelector('.popup__description')
+const imgZoomPopupDescription = imgZoomPopup.querySelector('.popup__description')
 
-export const imgZoomPopupImage = imgZoomPopup.querySelector('.popup__image')
+const imgZoomPopupImage = imgZoomPopup.querySelector('.popup__image')
 
 const profileName = document.querySelector('.profile__name')
 
@@ -36,7 +36,7 @@ const cardsArea = document.querySelector('.cards')
 
 const popupElems = document.querySelectorAll('.popup')
 
-export const openPopup = function (popup) {
+const openPopup = function (popup) {
   popup.classList.add('popup_opened')
   document.addEventListener('keydown', closePopupEsc)
 }
@@ -59,8 +59,8 @@ function closePopupEsc(evt) {
   }
 }
 
-const renderCard = function (object, template) {
-  const card = new Card(object, template)
+const renderCard = function (objectCard) {
+  const card = new Card(objectCard, '#card-template', handleOpenPopup)
   return card.makeCard()
 }
 const addNewCard = function (evt) {
@@ -89,7 +89,6 @@ const handleProfileFormSubmit = function (evt) {
   closePopup(popupEditProfile)
 }
 
-
 const addCardValidate = new FormValidator(validationConfig, cardAddPopup)
 addCardValidate.enableValidationCheck()
 const editProfileValidate = new FormValidator(validationConfig, formProfile)
@@ -111,3 +110,9 @@ formProfile.addEventListener('submit', handleProfileFormSubmit)
 
 formCards.addEventListener('submit', addNewCard)
 
+function handleOpenPopup(name, link) {
+  imgZoomPopupDescription.textContent = name;
+  imgZoomPopupImage.src = link;
+  imgZoomPopupImage.alt = name;
+  openPopup(imgZoomPopup);
+}

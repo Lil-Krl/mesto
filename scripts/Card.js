@@ -1,10 +1,9 @@
-import { openPopup, imgZoomPopup, imgZoomPopupDescription, imgZoomPopupImage } from './index.js'
-
 export class Card {
-  constructor(object, templateSelector) {
+  constructor(object, templateSelector, handleOpenPopup) {
     this._name = object.name
     this._link = object.link
     this._templateSelector = templateSelector
+    this._handleOpenPopup = handleOpenPopup
     this._elemCard = this._generateCard()
     this._elemImg = this._elemCard.querySelector('.cards__img')
     this._elemName = this._elemCard.querySelector('.cards__title')
@@ -12,7 +11,7 @@ export class Card {
     this._deleteIcon = this._elemCard.querySelector('.cards__delete')
   }
 
-  
+
   _generateCard() {
     const _elemCard = document
       .querySelector(this._templateSelector)
@@ -21,19 +20,6 @@ export class Card {
       .cloneNode(true);
 
     return _elemCard;
-  }
-
-
-
-
-
-
-
-  _getZoomImgs() {
-    imgZoomPopupDescription.textContent = this._name
-    imgZoomPopupImage.src = this._link
-    imgZoomPopup.alt = this._name
-    openPopup(imgZoomPopup)
   }
 
   _likeCard = (event) => {
@@ -57,6 +43,6 @@ export class Card {
   _addEventHandlers = () => {
     this._likeIcon.addEventListener('click', event => this._likeCard(event))
     this._deleteIcon.addEventListener('click', () => this._deleteCard())
-    this._elemImg.addEventListener('click', () => this._getZoomImgs())
+    this._elemImg.addEventListener('click', () => this._handleOpenPopup(this._title, this._link))
   }
 }
