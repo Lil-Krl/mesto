@@ -10,6 +10,7 @@ export class PopupWithImage extends Popup {
   open(description, image) {
     this._popupDescription.textContent = description
     this._popupImg.src = image
+    this._popupImg.alt = description
     super.open()
   }
 }

@@ -22,7 +22,7 @@ const userInfo = new UserInfo({
 })
 
 const popupEditeProfile = new PopupWithForm('#popup-profile', {
-  callbackFormSubmit: (profileData) => {
+  formSubmit: (profileData) => {
     userInfo.setUserInfo({
       username: profileData.username,
       activity: profileData.activity
@@ -50,7 +50,7 @@ const renderInitialCards = new Section({
 renderInitialCards.renderItems()
 
 const popupAddCard = new PopupWithForm('#popup-cards', {
-  callbackFormSubmit: (formValues) => {
+  formSubmit: (formValues) => {
     renderInitialCards.addItem(renderCard({
       name: formValues.placename,
       link: formValues.placeimage
