@@ -1,15 +1,27 @@
-export const iconEditProfile = document.querySelector('.profile__edit')
-
-export const iconAddCard = document.querySelector('.profile__add-btn')
-
-export const popupEditProfile = document.querySelector('#popup-profile')
-
-export const formProfile = popupEditProfile.querySelector('.popup__form')
-
-export const cardAddPopup = document.querySelector('#popup-cards')
-
-export const formCards = cardAddPopup.querySelector('.popup__form')
-
-export const nameInput = popupEditProfile.querySelector('#username-input')
-
-export const activityInput = popupEditProfile.querySelector('#activity-input')
+export const popupProfileOpenButton = document.querySelector('.profile__edit-button')
+export const popupProfileCloseButton = document.querySelector('#edit_close')
+export const popupProfile = document.querySelector('#popup_profile')
+export const formProfileElement = document.querySelector('#profile_form')
+export const nameInput = document.querySelector('#fullName')
+export const jobInput = document.querySelector('#workplace')
+export const profileName = document.querySelector('.profile__name')
+export const profileJob = document.querySelector('.profile__workplace')
+export const profileAvatar = document.querySelector('.profile__avatar')
+export const placeInput = document.querySelector('#name')
+export const popupConfirm = document.querySelector('#popup_confirm')
+export const popupAvatar = document.querySelector('#popup_avatar')
+export const placeImageInput = document.querySelector('#link')
+export const placeForm = document.querySelector('#place_form')
+export const placeAddButton = document.querySelector('.profile__add-button')
+export const popupPlace = document.querySelector('#popup_place')
+export const popupPlaceCloseButton = document.querySelector('#place_close')
+export const popupImage = document.querySelector('#popup_image')
+export const popupImageSrc = document.querySelector('.popup__image')
+export const popupImageTitle = document.querySelector('.popup__image-description')
+export const cardItems = document.querySelector('.card__items')
+export const imageCloseButton = document.querySelector('#image_close')
+export const popupOverlays = document.querySelectorAll('.popup')
+export const placeSubmitBtn = placeForm.querySelector('.popup__save-button')
+export const profileSubmitBtn = formProfileElement.querySelector('.popup__save-button')
+export const avatarButton = document.querySelector('.profile__avatar')
+export const formAvatar = document.querySelector('#avatar_form')
