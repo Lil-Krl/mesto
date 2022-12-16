@@ -20,7 +20,7 @@
 .card__item-like-button{background-color:transparent;background-image:url(images/like.77ea1611be45fdeca1cc.svg);background-repeat:no-repeat;background-size:contain;border:0;height:19px;margin:0;padding:0;width:22px}.card__item-like-button:hover{cursor:pointer;opacity:.6}
 .card__item-like-button_active{background-color:transparent;background-image:url(images/like_active.08af6fbb37d19d4aa333.svg);background-repeat:no-repeat;background-size:contain;border:0;height:19px;margin:0;width:22px}.card__item-like-button:hover{cursor:pointer;opacity:.6}
 .card__item-title{color:#000;font-size:24px;font-style:normal;font-weight:900;line-height:29px;margin:0;max-width:250px;overflow:hidden;padding-left:21px;text-overflow:ellipsis;white-space:nowrap;width:calc(100% - 21px)}
-.card__item-thrash{height:19px;position:absolute;right:20px;top:15px;width:18px}.card__item-thrash:hover{cursor:pointer;opacity:.6}
+.card__item-thrash{background:transparent url(images/trashcan.4af3841e0d351a5225a0.svg) no-repeat;border:none;margin:0;min-height:19px;min-width:18px;padding:0;position:absolute;transform:translate(244px,20px);transition:all .4s ease-in-out}.card__item-thrash:hover{cursor:pointer;opacity:.6}
 .footer{margin:66px auto 60px;max-width:880px}@media screen and (max-width:1023px){.footer{max-width:580px}}@media screen and (max-width:767px){.footer{margin-bottom:36px;margin-top:48px;max-width:282px}}
 .footer__copyright{color:#545454;font-size:18px;font-weight:400;letter-spacing:0;line-height:22px;margin:0;padding:0}@media screen and (max-width:767px){.footer__copyright{font-size:14px;line-height:17px}}
 .form{border:0;display:flex;flex-direction:column;margin:0;padding:0 36px}@media screen and (max-width:767px){.form{padding:0 22px}}
